@@ -1,5 +1,7 @@
 # 从 CNN 分类任务出发，搭建一个可扩展的深度学习工程框架
 
+> 深度学习项目工程化实战系列 01
+
 很多深度学习项目都是从一个 `train.py` 开始的。刚开始它很高效：读取数据、定义网络、计算 loss、反向传播、保存模型，全都写在一个文件里。但只要项目稍微复杂一点，问题就会很快出现：
 
 - 换一个数据集，需要改数据读取逻辑。
@@ -11,39 +13,8 @@
 本文从一个最小 CNN 分类任务出发，搭建一个通用深度学习工程框架。重点不是追求复杂网络，而是把一个完整训练和推理闭环拆成稳定的工程模块：`config`、`dataset`、`network`、`model`、`loss`、`launcher` 和 `main`。
 
 本文对应代码目录：
-=======
-# dl_project_engineering_series
-# 深度学习项目工程化实战系列
 
-本仓库用于配套公众号系列文章：从一个最小 CNN 分类任务出发，逐步搭建可配置、可扩展、可训练、可部署、可测试的深度学习工程框架。
-
-## 文章与代码
-
-```text
-dl_project_engineering_series/
-  article_01_basic_framework/
-=======
-    README.md                     # 第 1 篇文章正文
-    project/                      # 第 1 篇配套可运行工程
-  article_02_config_registry/
-    README.md
-    project/
-  article_03_trainer_plugins/
-    README.md
-    project/
-  article_04_parallel_training/
-    README.md
-    project/
-  article_05_task_paradigms/
-    README.md
-    project/
-  article_06_export_benchmark/
-    README.md
-    project/
-  article_07_testing/
-    README.md
-    project/
-```
+[GitHub：article_01_basic_framework/project](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_01_basic_framework/project)
 
 ## 1. 本篇最终工程目录
 
@@ -707,18 +678,16 @@ runs/
 
 本文代码位于：
 
-```text
-dl_project_engineering_series/article_01_basic_framework/project/
-```
+[GitHub：article_01_basic_framework/project](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_01_basic_framework/project)
 
-建议读者阅读文章时同步打开工程目录，对照每个文件理解调用关系。
-=======
+建议读者阅读文章时同步打开 GitHub 工程目录，对照每个文件理解调用关系。
+
 ## 系列规划
 
-1. [从 CNN 分类任务出发，搭建一个可扩展的深度学习工程框架](article_01_basic_framework/README.md)
-2. [配置驱动与注册表：让深度学习工程从 hard code 变成可组合](article_02_config_registry/README.md)
-3. [训练流程插件化：把 train/eval/predict/export/benchmark 拆成独立模式](article_03_trainer_plugins/README.md)
-4. [多卡训练实战：DataParallel、DDP 与 Pipeline 在工程中放在哪里](article_04_parallel_training/README.md)
-5. [从 CNN 扩展到 GAN、Diffusion、Transformer：同一工程框架下的不同任务范式](article_05_task_paradigms/README.md)
-6. [训练部署与模型导出：从 checkpoint 到 TorchScript、ONNX 和 benchmark](article_06_export_benchmark/README.md)
-7. [并行测试框架搭建：让深度学习工程扩展后仍然可验证](article_07_testing/README.md)
+1. [从 CNN 分类任务出发，搭建一个可扩展的深度学习工程框架](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_01_basic_framework)
+2. [配置驱动与注册表：让深度学习工程从 hard code 变成可组合](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_02_config_registry)
+3. [训练流程插件化：把 train/eval/predict/export/benchmark 拆成独立模式](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_03_trainer_plugins)
+4. [多卡训练实战：DataParallel、DDP 与 Pipeline 在工程中放在哪里](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_04_parallel_training)
+5. [从 CNN 扩展到 GAN、Diffusion、Transformer：同一工程框架下的不同任务范式](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_05_task_paradigms)
+6. [训练部署与模型导出：从 checkpoint 到 TorchScript、ONNX 和 benchmark](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_06_export_benchmark)
+7. [并行测试框架搭建：让深度学习工程扩展后仍然可验证](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_07_testing)
