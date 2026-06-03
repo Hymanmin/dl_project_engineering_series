@@ -1,0 +1,53 @@
+task: cnn_cls
+seed: 42
+
+imports:
+  - core.dataset.cnn_cls.cnn_cls_dataset
+  - core.networks.cnn_cls.framework
+  - core.losses.cnn_cls_loss
+  - core.models.cnn_cls.cnn_cls_model
+  - core.trainers.classification_trainer
+
+runtime:
+  device: cpu
+  work_dir: runs/cnn_cls
+  log_dir: runs/logs
+  checkpoint_dir: runs/checkpoints
+  parallel:
+    type: none
+    backend: gloo
+    pipeline_stages: 1
+    micro_batch_size: 1
+
+dataset:
+  name: cnn_cls_dataset
+  train_list: datatxt/train.txt
+  val_list: datatxt/val.txt
+  test_list: datatxt/test.txt
+  batch_size: 8
+  num_workers: 0
+  input_dim: 16
+  num_classes: 2
+
+network:
+  name: cnn_cls_network
+  input_dim: 16
+  hidden_dim: 32
+  num_classes: 2
+
+model:
+  name: cnn_cls_model
+  num_classes: 2
+
+loss:
+  name: cnn_cls_loss
+
+optimizer:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.0
+
+trainer:
+  name: classification_trainer
+  amp: false
+  grad_accum_steps: 1

@@ -1,0 +1,14 @@
+_base_: cnn_cls_train.yaml
+
+runtime:
+  device: cpu
+  parallel:
+    type: ddp
+    backend: gloo
+    pipeline_stages: 1
+    micro_batch_size: 1
+
+train:
+  epochs: 1
+  print_freq: 10
+  save_name: cnn_cls_ddp.pt

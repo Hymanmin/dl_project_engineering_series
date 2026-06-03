@@ -1,0 +1,4 @@
+﻿# Put one sample per line. Example format:
+# /path/to/sample.npy 0
+
+

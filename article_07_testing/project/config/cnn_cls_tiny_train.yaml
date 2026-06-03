@@ -1,0 +1,12 @@
+_base_: cnn_cls_train.yaml
+
+network:
+  name: cnn_cls_tiny_network
+  input_dim: 16
+  hidden_dim: 16
+  num_classes: 2
+
+train:
+  epochs: 2
+  print_freq: 10
+  save_name: cnn_cls_tiny.pt

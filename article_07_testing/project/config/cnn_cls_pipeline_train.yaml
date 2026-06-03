@@ -1,0 +1,9 @@
+_base_: cnn_cls_train.yaml
+
+runtime:
+  device: cuda
+  parallel:
+    type: pipeline
+    backend: gloo
+    pipeline_stages: 2
+    micro_batch_size: 2
