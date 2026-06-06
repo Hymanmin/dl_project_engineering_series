@@ -1,0 +1,6 @@
+_base_: cnn_cls_predict.yaml
+
+benchmark:
+  warmup: 5
+  iters: 50
+  output_path: runs/benchmark.json

@@ -1,0 +1,7 @@
+﻿_base_: base.yaml
+
+predict:
+  checkpoint: runs/checkpoints/cnn_cls.pt
+  output_path: runs/predict_results.txt
+
+
