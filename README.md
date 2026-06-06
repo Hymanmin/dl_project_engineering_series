@@ -1,6 +1,6 @@
 # 深度学习项目工程化实战系列
 
-本仓库用于配套公众号系列文章：从一个最小 CNN 分类任务出发，逐步搭建可配置、可扩展、可训练、可部署、可测试的深度学习工程框架。
+本仓库用于配套公众号系列文章：从一个最小 CNN 分类任务出发，逐步搭建可配置、可扩展、可训练、可部署，并能支撑大规模推理业务测试的深度学习工程框架。
 
 GitHub 仓库地址：[https://github.com/Hymanmin/dl_project_engineering_series/tree/main](https://github.com/Hymanmin/dl_project_engineering_series/tree/main)
 
@@ -39,4 +39,4 @@ dl_project_engineering_series/
 4. [多卡训练实战：DataParallel、DDP 与 Pipeline 在工程中放在哪里](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_04_parallel_training)
 5. [从 CNN 扩展到 GAN、Diffusion、Transformer：同一工程框架下的不同任务范式](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_05_task_paradigms)
 6. [训练部署与模型导出：从 checkpoint 到 TorchScript、ONNX 和 benchmark](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_06_export_benchmark)
-7. [并行测试框架搭建：让深度学习工程扩展后仍然可验证](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_07_testing)
+7. [面向大规模推理测试集的并行测试框架搭建](https://github.com/Hymanmin/dl_project_engineering_series/tree/main/article_07_testing)
