@@ -1,0 +1,27 @@
+task: cnn_cls
+seed: 42
+
+imports:
+  - core.dataset.cnn_cls.cnn_cls_dataset
+  - core.networks.cnn_cls.framework
+  - core.models.cnn_cls.cnn_cls_model
+
+runtime:
+  device: cpu
+
+dataset:
+  name: cnn_cls_dataset
+  test_list: datatxt/test.txt
+  batch_size: 8
+  input_dim: 16
+  num_classes: 2
+
+network:
+  name: cnn_cls_network
+  input_dim: 16
+  hidden_dim: 32
+  num_classes: 2
+
+model:
+  name: cnn_cls_model
+  num_classes: 2
