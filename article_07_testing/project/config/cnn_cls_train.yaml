@@ -1,8 +1,0 @@
-﻿_base_: base.yaml
-
-train:
-  epochs: 3
-  print_freq: 10
-  save_name: cnn_cls.pt
-
-

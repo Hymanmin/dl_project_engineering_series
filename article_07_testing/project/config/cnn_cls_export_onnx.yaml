@@ -1,7 +1,0 @@
-_base_: cnn_cls_predict.yaml
-
-export:
-  format: onnx
-  checkpoint: runs/checkpoints/cnn_cls.pt
-  output_path: exports/cnn_cls.onnx
-  opset_version: 17

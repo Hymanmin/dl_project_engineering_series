@@ -1,3 +1,0 @@
-﻿# Put test or prediction samples here.
-
-
